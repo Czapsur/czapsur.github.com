@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kostka Rubika</title>
+<style>
+    .cube {
+        width: 150px;
+        height: 150px;
+        perspective: 600px;
+    }
+
+    .face {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border: 2px solid black;
+        box-sizing: border-box;
+        text-align: center;
+        line-height: 150px;
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    .front {
+        transform: translateZ(75px);
+        background-color: orange;
+    }
+
+    .back {
+        transform: rotateY(180deg) translateZ(75px);
+        background-color: red;
+    }
+
+    .left {
+        transform: rotateY(-90deg) translateZ(75px);
+        background-color: blue;
+    }
+
+    .right {
+        transform: rotateY(90deg) translateZ(75px);
+        background-color: green;
+    }
+
+    .top {
+        transform: rotateX(90deg) translateZ(75px);
+        background-color: white;
+    }
+
+    .bottom {
+        transform: rotateX(-90deg) translateZ(75px);
+        background-color: yellow;
+    }
+</style>
+</head>
+<body>
+    <div class="cube">
+        <div class="face front">F</div>
+        <div class="face back">B</div>
+        <div class="face left">L</div>
+        <div class="face right">R</div>
+        <div class="face top">U</div>
+        <div class="face bottom">D</div>
+    </div>
+</body>
+</html>
